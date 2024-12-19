@@ -7,19 +7,21 @@
 */
 
 
-const salaries = [1200,5000,4000,2500,3450,1800]
+function filterSalaries(salaries, callback) {
+    
+    const selectedSalaries = []
+    
+    for(let i=0; i < salaries.length; i++){
+        if(callback(salaries[i])) {
+            selectedSalaries.push(salaries[i])
+        }
+    }
+    return selectedSalaries;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+const salaries = [1200,5000,4000,2500,3450,1800, 22000]
+console.log(filterSalaries(salaries, salary => salary > 3000));
+console.log(filterSalaries(salaries, salary => salary > 5000));
 
 const countries = [
   {
@@ -44,3 +46,4 @@ const countries = [
   },
 ]
 
+console.log(filterSalaries(countries, country => country.gdp > 2000));

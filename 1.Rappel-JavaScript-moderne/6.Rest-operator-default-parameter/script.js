@@ -25,3 +25,11 @@ console.log(welcoming("Paul"));
 console.log(welcoming("Sara"));
 console.log(welcoming());
 
+function myrest(...allparams) {
+  console.log('Received parameters ' + allparams);
+  allparams.forEach(param => console.log(param))
+  
+}
+
+myrest('one', 'two', 'three');
+myrest(1, 2, 3, 4 ,5);

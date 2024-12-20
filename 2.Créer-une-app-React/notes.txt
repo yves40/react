@@ -1,0 +1,7 @@
+Pour mettre à jour node et npm.
+1 / Installer la dernière version de node (qui embarque npm) sur https://nodejs.org/fr
+2 / Pour pouvoir exécuter npm dans une fenêtre powershell, 
+      a / Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+      b / Get-ExecutionPolicy -Scope CurrentUser ( pour vérifier )
+3 / Ensuite créer une application avec le bundler vite
+      npm create vite@latest

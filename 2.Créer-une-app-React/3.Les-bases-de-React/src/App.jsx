@@ -4,7 +4,7 @@ function App() {
 
   return (
     <div className="main-content">
-      <h1>Test</h1>
+      <h1>Cours React</h1>
       <Container></Container>
     </div>
   )

@@ -1,10 +1,11 @@
-import Container from "./lessons/7.Créer-une-liste/Container"
+import Container from "./lessons/10.Opérateur-ternaire/Container"
 
 function App() {
 
   return (
     <div className="main-content">
-      <h1>Cours React</h1>
+      <h3>Cours React</h3>
+      <hr />      
       <Container></Container>
     </div>
   )

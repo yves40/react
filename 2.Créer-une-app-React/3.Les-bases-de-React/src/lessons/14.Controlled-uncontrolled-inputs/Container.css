@@ -1,5 +1,6 @@
 label, input {
-  display: block;
+  display: inline-block;
+  margin-left: 1rem;
 }
 
 label{
@@ -8,6 +9,7 @@ label{
 
 input {
   margin-bottom: 14px;
+  margin-right: 1rem;
 }
 
 button {
@@ -17,4 +19,7 @@ button {
 
 .email-validation {
   display: none;
+}
+h2 {
+  margin-bottom: 3rem;
 }

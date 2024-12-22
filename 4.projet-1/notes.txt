@@ -1,0 +1,7 @@
+1 / Créer un nouveau projet vite
+2 / Installer tailwind css avec framework vite : npm install -D tailwindcss postcss autoprefixer
+3 / Installer post css :  npm i -g postcss-cli
+4 / Lancer l'initialisation de tailwind : npx tailwindcss init -p
+5 / Finir la config tailwind, instructions ici : https://tailwindcss.com/docs/guides/vite
+
+Les installations sont à faire si les produits n'ont encore pas été utilisés.

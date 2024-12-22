@@ -3,5 +3,6 @@
 3 / Installer post css :  npm i -g postcss-cli
 4 / Lancer l'initialisation de tailwind : npx tailwindcss init -p
 5 / Finir la config tailwind, instructions ici : https://tailwindcss.com/docs/guides/vite
+6 / npm i @tailwindcss/forms
 
 Les installations sont à faire si les produits n'ont encore pas été utilisés.

@@ -36,15 +36,15 @@ export default function Container() {
   else if(APIstate.error) content = <p>Error...</p>
   else if(APIstate.data?.length > 0) {
     content = <ul>
-      {APIstate.data.map (item => (
+      {APIstate.data.map (item => {
+        return (
         <li key={item.id}>
         <span>{item.name}</span>
         <span>{item.email}</span>
         <span>{item.phone}</span>
-        </li>
-      ))}
+        </li> )
+      })}
     </ul>
-    console.log(content);    
   }
   else if (APIstate.data?.length === 0)
     content = <p>Pas de données trouvées</p>

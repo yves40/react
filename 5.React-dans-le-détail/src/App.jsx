@@ -1,4 +1,4 @@
-import Container from "./lessons/7.Utiliser-un-observateur/Container"
+import Container from "./lessons/9.Sélectionner-un-tableau-d'éléments/Container"
 
 function App() {
 

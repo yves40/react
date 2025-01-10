@@ -5,6 +5,8 @@ import './dynamicRefSelection.css'
 
 export default function DynamicRefSelection() {
 
+  const version = 'DynamicRefSelection: 1.34, Jan 10 2025'
+
   const [fruits, setFruits] = useState([
     {id: nanoid(8), value: 'Pommes ', price: 100},
     {id: nanoid(8), value: 'Oranges ', price: 200},

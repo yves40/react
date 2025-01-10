@@ -1,4 +1,4 @@
-import Container from "./lessons/9.Sélectionner-un-tableau-d'éléments/Container"
+import Container from "./lessons/10.Comprendre-props-children/Container"
 
 function App() {
 

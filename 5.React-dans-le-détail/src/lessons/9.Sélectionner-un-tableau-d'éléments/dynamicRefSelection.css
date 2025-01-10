@@ -4,3 +4,8 @@ span {
 ul {
   list-style: none;
 }
+button {
+  margin-top: 2rem;
+  padding: 10px;
+  border-radius: 10px;
+}

@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect } from "react"
 import {nanoid} from "nanoid"
+import './dynamicRefSelection.css'
+
 
 export default function DynamicRefSelection() {
 
@@ -12,7 +14,6 @@ export default function DynamicRefSelection() {
   ])
   const fruitsRef = useRef([])
 
-  console.log(fruits);
   /**
    * 
    * @param {*} id The element ID to be removed
@@ -24,38 +25,37 @@ export default function DynamicRefSelection() {
    * 
    * @param {*} elem L'élément qui va être référencé dans les Refs
    */
-  function manageRefs(elem) {
+  function manageRefs(elem, fruit) {
+    console.log(`manageRefs : This is ${fruit.value}`);
+    
     if(elem) {
       fruitsRef.current.push(elem)
     }
     else {
       fruitsRef.current.shift()
     }
-    // fruitsRef.current[0].style.color = 'red';
-    // console.log(fruitsRef.current[0]);
   }
 
   if(fruitsRef.current.length != 0) {
     fruitsRef.current.map((elem, index) => {
-      console.log(elem);
       if(fruits[index].price > 300)elem.style.color = 'red'
     })
   }
-
 
   return (
     <>
       <h1>Sélection dynamique</h1>
       <ul>
-          {fruits.map((fruit, index) => (
-            <li key={fruit.id} onClick={() => deleteFruit(fruit.id)} ref={elem => {manageRefs(elem) }}>
-              <span>{index+1}</span><span>{fruit.value}</span><span>{fruit.price}</span><span>{fruit.id}</span>
-            </li>
-          ))}
-      </ul>
+        {fruits.map((fruit, index) => (
+          <li key={fruit.id} onClick={() => deleteFruit(fruit.id)} ref={elem => { manageRefs(elem, fruit) }}>
+            <span>{index+1}</span><span>{fruit.value}</span><span>{fruit.price}</span><span>{fruit.id}</span>
+          </li>
+        ))}
+        {console.log(`## MAIN return section, fruits arrray size is : ${fruits.length}`)}
+        {console.log(`## MAIN return section, fruitsrefs arrray size is : ${fruitsRef.current.length}`)}
+        </ul>
       <button onClick={() => setFruits([...fruits, {id: nanoid(8), value: 'Nouveau fruit exotique',
                 price: 1000 }])}>Add fruit</button>
-      {console.log(fruitsRef)}
     </>
   )
 }

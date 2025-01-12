@@ -1,4 +1,4 @@
-import Tabs from "./lessons/3.Coder-une-navbar/Navbar"
+import Tabs from "./lessons/4.Validation/Validation"
 
 function App() {
 

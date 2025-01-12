@@ -8,9 +8,9 @@ export default function Navbar() {
                 state={{url: "/", request: "Back home", copyright: "CBS 1.10 Jan 12 2025"}}>
                     Home
             </NavLink>
-            <Link to="/analytics" className="mx-2 text-md text-semibold">
+            <NavLink to="/analytics" className={({isActive}) => `${isActive && "text-red-600 font-bold"} mx-2 text-md`}>
                 Analytics
-            </Link>
+            </NavLink>
             <NavLink to="/contact" className={({isActive}) => `${isActive && "text-red-600 font-bold"} mx-2 text-md`}
                 state={{url: "/contact", request: "Get contact page home", copyright: "CBS 1.10 Jan 12 2025"}}>
                     Contact

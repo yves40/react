@@ -1,4 +1,4 @@
-import Tabs from "./lessons/2.Coder-des-onglets/Tabs"
+import Tabs from "./lessons/3.Coder-une-navbar/Navbar"
 
 function App() {
 

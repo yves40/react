@@ -5,11 +5,12 @@ import { ThemeContext } from '../../context/ThemeProvider'
 
 export default function Content() {
 
-    const {darkmode} = useContext(ThemeContext)
+    const {darkmode, themeVersion} = useContext(ThemeContext)
 
   return (
     <div className='container'>
         <h1>{darkmode ? "C'est la nuit" : "Le jour s'est levé"}</h1>
+        <h3>{themeVersion}</h3>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, distinctio!
         Maiores quas cum totam fugiat veritatis enim fugit reprehenderit eos.
         Magnam, nulla iste? Quasi harum obcaecati officia eligendi. Sequi, tempore!

@@ -5,6 +5,7 @@ export const ThemeContext = createContext()
 export default function ThemeProvider(props) {
 
   const [darkmode, setDarkMode] = useState(false)
+  const themeVersion = 'ThemeProvider 1.01, Jan 14 2025'
 
   function ToggleTheme() {
     setDarkMode(!darkmode)
@@ -17,7 +18,7 @@ export default function ThemeProvider(props) {
     document.body.classList.remove('dark')
   }
   return (
-    <ThemeContext.Provider value={{ToggleTheme, darkmode}}>
+    <ThemeContext.Provider value={{ToggleTheme, darkmode, themeVersion}}>
       {props.children}
     </ThemeContext.Provider>
   )

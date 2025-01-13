@@ -12,7 +12,7 @@ export default function Home() {
         Excepturi vel quo sunt nemo! Vitae, libero inventore reiciendis, esse repellat pariatur omnis natus sequi vel vero voluptatibus porro dolorum quis soluta! Officiis doloribus atque fuga nesciunt itaque deserunt totam vero molestias ducimus at explicabo, laborum neque pariatur quis error.
         Laudantium quos laboriosam odit accusamus nam consequatur repellat odio pariatur! Id, eius odio? Atque, commodi in? Minima voluptas at blanditiis sint nam, id animi nesciunt ullam! Culpa fugiat nobis delectus velit iure illo, libero dolorem tenetur repellat perferendis quas et?
         </p>
-        <p className='text-sm font-semibold text-center pt-2'>{params.state.copyright}</p>  
+        <p className='text-sm font-semibold text-center pt-2'>{params.state && params.state.copyright}</p>  
     </div>
   )
 }

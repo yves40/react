@@ -19,7 +19,17 @@ const initialState = {
 
 const fruits = createSlice({
     name: 'fruits',
-    initialState
+    initialState,
+    reducers: {
+
+    },
+    // Les extraReducers permettent de recevoir des dispatch envoyés à d'autres Reducers
+    // Attention : The object notation for `createSlice.extraReducers` is deprecated
+    extraReducers: {
+        ["cart/addOne"]: (state, action) => {
+           console.log('Hello from fruits.js extra reducer');
+        }
+    }
 })
 
 export default fruits.reducer

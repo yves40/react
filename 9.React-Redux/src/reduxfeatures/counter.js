@@ -4,7 +4,7 @@ const initialState = {
     value: 0
 }
 
-export const counter = createSlice({
+const counter = createSlice({
     name: "counter",
     initialState, // équivaut à initialState: initialState,
     reducers: {

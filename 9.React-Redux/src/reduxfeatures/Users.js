@@ -29,6 +29,7 @@ export function getData(action) {
         dispatch(addLoader())
         fetch("https://jsonplaceholder.typicode.com/users")
         .then(response => {
+            if(!response.ok)  throw new Error()
             return response.json()
         })
         .then(data => {

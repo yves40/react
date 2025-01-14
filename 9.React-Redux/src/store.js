@@ -3,6 +3,7 @@ import counter from './reduxfeatures/counter'
 import fruits from './reduxfeatures/fruits'
 import cart from './reduxfeatures/cart'
 import users from './reduxfeatures/Users'
+import chrono from './reduxfeatures/chrono'
 
 // import logger from 'redux-logger'
 
@@ -11,7 +12,8 @@ export const store = configureStore({
         // counter,
         fruits,
         cart,
-        users
+        users,
+        chrono
     },
     // Ce Logger est fourni de base et file pleins d'infos pour debugger
     // middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger)

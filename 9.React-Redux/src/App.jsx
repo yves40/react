@@ -1,6 +1,7 @@
 import Counter from './pages/Counter/Counter'
 import Fruity from './pages/Fruity/Fruity'
 import Users from './pages/Users/Users'
+import Chrono from './pages/Chrono/Chrono'
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         {/* <Counter></Counter> */}
         <Fruity></Fruity>
         <Users></Users>
+        <Chrono></Chrono>
       </div>
     </div>
   )

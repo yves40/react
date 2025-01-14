@@ -10,7 +10,6 @@ export default function Users() {
     if(!users.data && !users.loading && !users.error) {
         dispatch(getData())
     }
-    console.log(users);
     
     let content
     if(users.loading) {
@@ -19,7 +18,7 @@ export default function Users() {
     else if (users.error) {
         content = <p className="text-red-600">An error occured !!!</p>
     }
-    else {
+    else if (users.data) {
         console.log(users.data)
         content = (
             <ul>

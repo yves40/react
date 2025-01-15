@@ -54,6 +54,7 @@ const shadowSlice = createSlice(
 
             },
             addShadow: (state, action) => {
+                // Just push a new object with default params
                 state.push(
                     {
                         id: nanoid(8),
@@ -98,8 +99,17 @@ const shadowSlice = createSlice(
                     }
                 )
             },
-            updateShadowValue: (state, action) => {
-
+            updateShadowValue: (state, action) => { 
+                // Find modified shadow entry
+                const currentShadow = state.find(
+                    shadow => shadow.id === action.payload.shadowID
+                )
+                // Find the input parameter being changed pointed 
+                // by inputNumber
+                const currentInput = currentShadow.inputs.find(
+                    params => params.inputNumber === action.payload.inputNumber
+                )
+                currentInput.value = action.payload.value
             },
             updateCheckbox: (state, action) => {
 

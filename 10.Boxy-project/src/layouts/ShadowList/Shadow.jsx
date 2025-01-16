@@ -1,12 +1,15 @@
 import { useState, useEffect } from "react"
+import { useDispatch } from "react-redux"
 import chevron from '../../assets/chevron.svg'
 import  ShadowRange  from './ShadowRange'
 import ShadowColorPicker from './ShadowColorPicker'
 import ShadowCheckbox from "./ShadowCheckbox"
+import { removeShadow } from "../../reduxfeatures/shadows"
 
 export default function Shadow({panelNumber, shadow}) {
     
     const [toggleShadow, setToggleShadow] = useState(false)
+    const dispatch = useDispatch()
 
     const shadowInputs = shadow.inputs.map ((prop, index) => {
         if(prop.type === 'range') {
@@ -46,7 +49,8 @@ export default function Shadow({panelNumber, shadow}) {
                 <div className="flex items-end px-6 pt-4">
                     <ShadowCheckbox name="active" shadowID={shadow.id}/>
                     <ShadowCheckbox name="inset" shadowID={shadow.id}/>
-                    <button className="ml-auto text-sm bg-red-600 text-white py-1 px-3 rounded">
+                    <button className="ml-auto text-sm bg-red-600 text-white py-1 px-3 rounded"
+                        onClick={() => dispatch(removeShadow(shadow.id))}>
                         Remove
                     </button>
                 </div>

@@ -8,8 +8,6 @@ export default function ShadowCheckbox({name, shadowID}) {
     ))
     const dispatch = useDispatch()
     
-    console.log(checkboxShadow);
-
     return (
     <>
         <input type="checkbox" 
